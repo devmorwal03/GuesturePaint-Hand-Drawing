@@ -18,3 +18,7 @@ Here Colour Detection and tracking is used in order to achieve the objective. Th
 
 Requirements: python3 , numpy , opencv installed on your system.
 
+# Video
+
+https://github.com/user-attachments/assets/3b41343f-e085-4612-a1ee-87f0093d40d9
+
