@@ -1,11 +1,13 @@
 # GuesturePaint-Hand-Drawing
-Computer vision project implemented with OpenCV
+This project is a fun and practical implementation of computer vision using OpenCV, where I built a virtual "Air Canvas" that allows users to draw in the air by waving a colored object, like a fingertip marker, in front of a webcam.
 
-Ever wanted to draw your imagination by just waiving your finger in air. In this post we will learn to build an Air Canvas which can draw anything on it by just capturing the motion of a coloured marker with camera. Here a coloured object at tip of finger is used as the marker.
+The main idea was to track the motion of a colored object in real-time and use that motion to draw on a virtual canvas. I used the HSV color space for color detection because it is more robust to lighting changes than RGB. A trackbar interface was added to dynamically adjust HSV ranges for different markers.
 
-We will be using the computer vision techniques of OpenCV to build this project. The preffered language is python due to its exhaustive libraries and easy to use syntax but understanding the basics it can be implemented in any OpenCV supported language.
+After detecting the colored object in the frame, I applied **morphological operations** like erosion and dilation to clean up the mask and remove noise. Then, using **contour detection**, I identified the largest contour in the mask, which represents the marker. I extracted its center position and stored these coordinates to draw continuous lines on the canvas.
 
-Here Colour Detection and tracking is used in order to achieve the objective. The colour marker in detected and a mask is produced. It includes the further steps of morphological operations on the mask produced which are Erosion and Dilation. Erosion reduces the impurities present in the mask and dilation further restores the eroded main mask.
+To make the tool more interactive, I added ink color selection buttons on the screen. When the marker touches those areas, the ink color changes accordingly.
+
+This project helped me strengthen my understanding of real-time image processing, color segmentation, contour analysis, and OpenCV operations. It also showed how computer vision can be used to build intuitive and touch-free user interfaces.
 
 # Algorithm
 
